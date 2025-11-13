@@ -78,6 +78,7 @@ export const MobileImageContainer = styled.div`
   margin: 2rem auto 0;
   overflow: hidden;
   border-radius: 0.5rem;
+  height: 23.75rem;
 
   @media (min-width: 769px) {
     display: none;
@@ -85,7 +86,6 @@ export const MobileImageContainer = styled.div`
 
   @media (max-width: 768px) {
     display: block;
-    height: 23.75rem;
 
     img {
       object-fit: cover;

@@ -4,6 +4,7 @@ import { Wrapper, Inner, Pill, HeroTextContainer, MobileImageContainer } from '.
 import ic_chevron_right from '../../../../public/svgs/ic_chevron_right.svg';
 import { GetStartedButton } from '@/components';
 import MaskText from '@/components/Common/MaskText';
+import RevealCover from '@/components/Common/RevealCover';
 import { useIsMobile } from '../../../../libs/useIsMobile';
 import newmobile_banner from '../../../../public/images/newmobile_banner.jpg';
 import {
@@ -35,14 +36,17 @@ const HeroSection = () => {
             </>
           )}
         </HeroTextContainer>
-        <MobileImageContainer>
-          <Image
-            src={newmobile_banner}
-            alt="newmobile_banner"
-            fill
-            priority
-          />
-        </MobileImageContainer>
+        {isMobile && (
+          <MobileImageContainer>
+            <RevealCover />
+            <Image
+              src={newmobile_banner}
+              alt="newmobile_banner"
+              fill
+              priority
+            />
+          </MobileImageContainer>
+        )}
         <GetStartedButton padding="1rem 2rem" />
       </Inner>
     </Wrapper>
