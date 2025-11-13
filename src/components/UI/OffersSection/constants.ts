@@ -4,19 +4,19 @@ import wealth_management from '../../../../public/images/wealth_management.png';
 import financial_planning from '../../../../public/images/financial_planning.png';
 // For desktop
 export const desktopHeaderPhrases = [
-  'Elevate Your Financial',
-  'Journey with RAFT',
+  'Elevate Your Business',
+  'Journey with Certifyied',
 ];
 export const desktopParagraphPhrase = [
-  'RAFT offers a world of financial possibilities. From investments to payments,',
-  "we've got you covered. Join us and unlock your potential today.",
+  'Certifyied offers a world of Marketing  possibilities. From Advertisement to SEO optimization,',
+  "we've got you covered. Join us and unlock your Business potential today.",
 ];
 
 // For mobile
 export const mobileParagraphPhrase = [
-  'RAFT offers a world of financial possibilities. From',
-  "investments to payments, we've got you covered.",
-  'Join us and unlock your potential today.',
+  'Certifyied offers a world of Marketing  possibilities. From',
+  "Advertisement to SEO optimization, we've got you covered.",
+  'Join us and unlock your Business potential today.',
 ];
 
 export const offers = [

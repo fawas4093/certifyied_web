@@ -3,9 +3,9 @@ import ic_identification from '../../../../public/svgs/ic_identification.svg';
 import ic_lock_closed from '../../../../public/svgs/ic_lock_closed.svg';
 
 // For desktop
-export const desktopHeaderPhrase = ["Introducing RAFT's Next-", 'Gen Cards'];
+export const desktopHeaderPhrase = ["Introducing CERTIFYIED ", 'Zignature Cards'];
 export const desktopParagraphPhrase = [
-  " Discover RAFT's latest innovation – our new cards. Elevate your banking",
+  " Discover CERTIFYIED'S latest innovation – our new cards. Elevate your marketing",
   'experience with cutting-edge features, security, and unprecedented',
   'convenience.',
 ];

@@ -25,7 +25,7 @@ export const Pill = styled.div`
   align-items: center;
   gap: 0.625rem;
   border-radius: 6.25rem;
-  border: 0.2px solid #989898;
+  border: 0.2px solid #fafafaff;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   margin-bottom: 1rem;
@@ -50,7 +50,7 @@ export const HeroTextContainer = styled.div`
 
   p {
     max-width: 41.75rem;
-    color: #bdbdbd;
+    color: #2d2b2bff;
     font-size: 1.5rem;
     font-weight: 400;
     margin: 0 auto;
@@ -67,6 +67,30 @@ export const HeroTextContainer = styled.div`
     p {
       font-size: 1rem;
       line-height: 1.5rem;
+    }
+  }
+`;
+
+export const MobileImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem auto 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    height: 23.75rem;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
   }
 `;

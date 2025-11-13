@@ -1,10 +1,11 @@
 'use client';
 import Image from 'next/image';
-import { Wrapper, Inner, Pill, HeroTextContainer } from './styles';
+import { Wrapper, Inner, Pill, HeroTextContainer, MobileImageContainer } from './styles';
 import ic_chevron_right from '../../../../public/svgs/ic_chevron_right.svg';
 import { GetStartedButton } from '@/components';
 import MaskText from '@/components/Common/MaskText';
 import { useIsMobile } from '../../../../libs/useIsMobile';
+import newmobile_banner from '../../../../public/images/newmobile_banner.jpg';
 import {
   mobileParagraphPhrases,
   mobilePhrases,
@@ -18,8 +19,8 @@ const HeroSection = () => {
     <Wrapper>
       <Inner>
         <Pill>
-          <span>Introducing Raft cards</span>
-          <Image src={ic_chevron_right} alt="chevron-right" />
+          <span>Scroll for more</span>
+          
         </Pill>
         <HeroTextContainer>
           {isMobile ? (
@@ -34,6 +35,14 @@ const HeroSection = () => {
             </>
           )}
         </HeroTextContainer>
+        <MobileImageContainer>
+          <Image
+            src={newmobile_banner}
+            alt="newmobile_banner"
+            fill
+            priority
+          />
+        </MobileImageContainer>
         <GetStartedButton padding="1rem 2rem" />
       </Inner>
     </Wrapper>

@@ -1,22 +1,9 @@
 'use client';
 import { useState } from 'react';
 import { Div, Word, Span, AbsoluteContainer } from './styles';
+import { Variants } from 'framer-motion';
 
-type AnimationProps = {
-  rest: {
-    y: number;
-  };
-  hover: {
-    y: number;
-    transition: {
-      duration: number;
-      ease: number[];
-      type: string;
-    };
-  };
-};
-
-const titleAnimation = {
+const titleAnimation: Variants = {
   rest: {
     transition: {
       staggerChildren: 0.005,
@@ -29,7 +16,7 @@ const titleAnimation = {
   },
 };
 
-const letterAnimation = {
+const letterAnimation: Variants = {
   rest: {
     y: 0,
   },
@@ -43,7 +30,7 @@ const letterAnimation = {
   },
 };
 
-const letterAnimationTwo = {
+const letterAnimationTwo: Variants = {
   rest: {
     y: 25,
   },
@@ -57,53 +44,54 @@ const letterAnimationTwo = {
   },
 };
 
-const AnimatedLink = ({ title }: { title: string }) => {
+interface AnimatedLinkProps {
+  title: string;
+  url?: string;
+}
+
+const AnimatedLink: React.FC<AnimatedLinkProps> = ({ title, url = '/' }) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (url.startsWith('#')) {
+      e.preventDefault();
+      const element = document.getElementById(url.substring(1));
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }
+  };
+
   return (
     <Div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <AnimatedWord
-        title={title}
-        animations={letterAnimation}
-        isHovered={isHovered}
-      />
-      <AbsoluteContainer>
-        <AnimatedWord
-          title={title}
-          animations={letterAnimationTwo}
-          isHovered={isHovered}
-        />
+      <AbsoluteContainer href={url} onClick={handleClick}>
+        <Word
+          variants={titleAnimation}
+          initial="rest"
+          animate={isHovered ? 'hover' : 'rest'}
+        >
+          {title.split('').map((char, i) =>
+            char === ' ' ? (
+              <Span key={i}>&nbsp;</Span>
+            ) : (
+              <Span
+                variants={char === title[0] ? letterAnimation : letterAnimationTwo}
+                key={i}
+              >
+                {char}
+              </Span>
+            )
+          )}
+        </Word>
       </AbsoluteContainer>
     </Div>
   );
 };
 
 export default AnimatedLink;
-
-const AnimatedWord = ({
-  title,
-  animations,
-  isHovered,
-}: {
-  title: string;
-  animations: AnimationProps;
-  isHovered: boolean;
-}) => (
-  <Word
-    variants={titleAnimation}
-    initial="rest"
-    animate={isHovered ? 'hover' : 'rest'}
-  >
-    {title.split('').map((char, i) =>
-      char === ' ' ? (
-        <Span key={i}>&nbsp;</Span>
-      ) : (
-        <Span variants={animations} key={i}>
-          {char}
-        </Span>
-      )
-    )}
-  </Word>
-);

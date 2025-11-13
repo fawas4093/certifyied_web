@@ -18,7 +18,12 @@ export const Inner = styled.main`
   }
 `;
 
-export const FooterLogo = styled.div`
+export const FooterLogo = styled.div
+` img {
+  width: auto;
+  height: 70px;
+  object-fit: contain;
+  }
   @media (max-width: 768px) {
     width: 13.2rem;
     height: 5.6rem;
@@ -56,7 +61,7 @@ export const QRContainer = styled.div`
   padding: 1.25rem 1rem;
   gap: 0.75rem;
   border-radius: 0.5rem;
-  border: 1px dashed var(--White, #fff);
+  border: 1px dashed var(--White, #0a0a0aff);
 `;
 
 export const QRImageCtn = styled.div``;
@@ -115,7 +120,7 @@ export const LinksContainer = styled.ul`
   gap: 0.75rem;
 
   li {
-    color: #efefef;
+    color: #0a0a0aff;
     font-size: 1rem;
     font-weight: 400;
     cursor: pointer;
@@ -126,7 +131,7 @@ export const LinksContainer = styled.ul`
       content: '';
       width: 100%;
       height: 1px;
-      background-color: #efefef;
+      background-color: #0a0a0aff;
       left: 0;
       bottom: -5px;
       transform: scaleX(0);

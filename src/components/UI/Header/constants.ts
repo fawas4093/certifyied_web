@@ -22,8 +22,9 @@ export const menu = {
 };
 export const links = [
   {
-    url: '/',
+    url: '#financial-freedom',
     linkTo: 'Solutions',
+    section: 'financial-freedom'
   },
   {
     url: '/',

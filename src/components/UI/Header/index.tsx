@@ -10,7 +10,8 @@ import {
   AbsoluteLinks,
   BurgerMenu,
 } from './styles';
-import raft_logo from '../../../../public/svgs/raft_logo.svg';
+// Update the import to use the new logo
+import raft_logo from '../../../../public/images/certifyied logo white.png';
 import ic_bars from '../../../../public/svgs/ic_bars.svg';
 import { GetStartedButton } from '@/components';
 import AnimatedLink from '@/components/Common/AnimatedLink';
@@ -36,7 +37,7 @@ const Header = () => {
         </LogoContainer>
         <Nav className={isOpen ? 'active' : ''}>
           {links.map((link, i) => (
-            <AnimatedLink key={i} title={link.linkTo} />
+            <AnimatedLink key={i} title={link.linkTo} url={link.url} />
           ))}
         </Nav>
         <CallToActions className={isOpen ? 'active' : ''}>

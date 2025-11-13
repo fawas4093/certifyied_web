@@ -4,41 +4,41 @@ import ic_circle_stack from '../../../../public/svgs/ic_circle_stack.svg';
 import ic_arrows_left_right from '../../../../public/svgs/ic_arrows_right_left.svg';
 
 // For desktop
-export const desktopHeaderPhrase = ['Your Financial Freedom,', 'Your Way'];
+export const desktopHeaderPhrase = ['Your Marketing,', 'In Advanced Way'];
 export const desktopParagraphPhrase = [
-  'We believe that managing your finances should be effortless and cost-effective.',
+  'We believe that managing your Marketing should be effortless and cost-effective.',
   "That's why we offer you the freedom you deserve.",
 ];
 export const desktopBriefNotePhrase = [
-  'Smart investments,',
-  'secure payments, and',
-  'expert guidance, all in',
+  'Smart Marketing,',
+  'SEO Optimization,, and',
+  'expert developement services, all in',
   'one place.',
 ];
 
 // For mobile
-export const mobileHeaderPhrase = ['Your Financial', 'Freedom, Your Way'];
+export const mobileHeaderPhrase = ['Your Marketing', 'In Advanced Way'];
 export const mobileParagraphPhrase = [
-  'We believe that managing your finances should be',
+  'We believe that managing your Marketing should be',
   "effortless and cost-effective. That's why we offer",
   ' you the freedom you deserve.',
 ];
 
 export const mobileBriefNotePhrase = [
   'Smart',
-  ' investments,',
-  'secure',
-  ' payments,',
+  ' Marketing,',
+  'SEO',
+  ' Optimization,',
   'and expert',
-  'guidance, all',
+  'developement, all',
   'in one place.',
 ];
 
 export const edges = [
   {
-    point: 'No minimum balance fees',
+    point: 'No minimum extra fees',
     details:
-      'Say goodbye to minimum balance fees. Your account, your balance—no hidden charges',
+      'Say goodbye to high fees. Your business, our marketing—no hidden charges',
     icon: ic_banknotes,
   },
   {

@@ -30,7 +30,8 @@ export const Span = styled(motion.span)`
   }
 `;
 
-export const AbsoluteContainer = styled.div`
+export const AbsoluteContainer = styled.a`
   position: absolute;
   top: 0;
+  text-decoration: none;
 `;

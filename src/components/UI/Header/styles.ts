@@ -21,11 +21,21 @@ export const Inner = styled.div`
 `;
 
 export const LogoContainer = styled.div`
+  img {
+    width: auto;
+    height: 40px; 
+    object-fit: contain;
+  }
+
   @media (max-width: 768px) {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
+    img {
+      height: 32px; // Slightly smaller on mobile
+    }
   }
 `;
 

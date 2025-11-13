@@ -1,6 +1,5 @@
 'use client';
 import { styled } from 'styled-components';
-import grid_background from '../../../../public/images/offer_card_grid_1.png';
 
 export const Wrapper = styled.section``;
 
@@ -58,7 +57,7 @@ export const ImageCtn = styled.div`
     content: '';
     height: 13.4375rem;
     width: 100%;
-    background: linear-gradient(180deg, rgba(19, 19, 19, 0) 0%, #131313 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
     left: 0;
     top: 50px;
   }
@@ -192,7 +191,7 @@ export const OfferCard = styled.div`
   border: 1px solid var(--stroke, rgba(255, 255, 255, 0.04));
   display: flex;
   flex-direction: column;
-  background: url(${grid_background.src}) #131313 no-repeat;
+  background: #ffffff;
 
   &:first-child {
     flex: 2;

@@ -57,6 +57,25 @@ export const ParallaxImages = styled.div`
   position: relative;
   max-width: 53.7rem;
   margin: 3rem auto 0;
+  
+  img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  @media (max-width: 768px) {
+    img {
+      height: 45px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    img {
+      height: 35px;
+    }
+  }
 `;
 
 export const Div = styled(motion.div)`
